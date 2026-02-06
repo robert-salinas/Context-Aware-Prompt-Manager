@@ -1,5 +1,10 @@
 # 🚀 Context-Aware Prompt Manager (CAPM) v0.1.0
 
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+![Python: 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)
+![Tests: passing](https://img.shields.io/badge/tests-passing-brightgreen.svg)
+![Build: passing](https://img.shields.io/badge/build-passing-brightgreen.svg)
+
 Context-Aware Prompt Manager (CAPM) es una herramienta de ingeniería diseñada para gestionar, versionar y optimizar tus prompts de LLM mediante la extracción automática del contexto de tu proyecto, asegurando que cada interacción con la IA sea precisa y relevante.
 
 ## ✨ Características
@@ -65,7 +70,12 @@ El proyecto mantiene registros estructurados (Architecture Decision Records) par
 
 ## 📖 Documentación Adicional
 - [🏛️ Arquitectura y Decisiones de Diseño](docs/ARCHITECTURE.md)
-- [🚀 Guía de Uso Detallada](docs/USAGE.md)
-- [🤝 Guía de Contribución](docs/CONTRIBUTING.md)
+- [🚀 Ejemplos de Uso](docs/EXAMPLES.md)
+- [🛠️ Solución de Problemas](docs/TROUBLESHOOTING.md)
+- [🤝 Guía de Contribución](CONTRIBUTING.md)
+- [⚖️ Código de Conducta](CODE_OF_CONDUCT.md)
 
-Desarrollado con ❤️ para ingenieros que buscan elevar la calidad de sus interacciones con LLMs mediante el rigor técnico y el contexto.
+## ⚖️ Licencia
+Este proyecto está bajo la Licencia MIT. Consulta el archivo [LICENSE](LICENSE) para más detalles.
+
+Desarrollado con ❤️ por Robert Salinas para ingenieros que buscan elevar la calidad de sus interacciones con LLMs mediante el rigor técnico y el contexto.
