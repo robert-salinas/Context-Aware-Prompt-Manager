@@ -1,0 +1,31 @@
+[project]
+name = "context-aware-prompt-manager"
+version = "0.1.0"
+description = "Versionado + contexto para tus prompts"
+authors = [
+    { name = "Robert Esteban" }
+]
+dependencies = [
+    "typer[all]>=0.9.0",
+    "gitpython>=3.1.30",
+    "jinja2>=3.1.2",
+    "pyyaml>=6.0.1",
+    "rich>=13.5.2",
+    "pydantic>=2.0.0",
+]
+readme = "README.md"
+requires-python = ">=3.9"
+
+[project.scripts]
+prompt-mgr = "prompt_mgr.cli:app"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.coverage.run]
+source = ["src/prompt_mgr"]

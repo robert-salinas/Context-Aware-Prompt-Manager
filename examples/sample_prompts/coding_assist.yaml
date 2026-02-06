@@ -1,0 +1,12 @@
+name: "Asistente de Coding"
+description: "Ayuda general para tareas de programación"
+template: |
+  Actúa como un experto en {{ tech_stack | join(' y ') }}.
+  Estamos trabajando en un proyecto llamado {{ project_name }}.
+  
+  Contexto del proyecto:
+  {{ readme_summary }}
+  
+  Tarea: {{ user_query }}
+tags: ["coding", "assist"]
+version: "1.0.0"
