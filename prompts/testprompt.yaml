@@ -1,0 +1,6 @@
+name: TestPrompt
+description: No description
+template: Hello
+tags:
+- test
+version: 0.1.0
