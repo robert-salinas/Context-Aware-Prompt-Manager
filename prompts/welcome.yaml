@@ -1,0 +1,8 @@
+name: Welcome Prompt
+description: A simple welcome prompt to get you started
+template: Hello! I am working on a {{ tech_stack | join(', ') }} project called {{
+  project_name }}.
+tags:
+- initial
+- sample
+version: 0.1.0
