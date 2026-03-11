@@ -1,0 +1,178 @@
+[
+    {
+        "id": "20260311000001",
+        "title": "Arquitectura de Microservicios",
+        "category": "Ingeniería",
+        "tags": ["backend", "microservices", "patterns"],
+        "content": "Actúa como un arquitecto senior. Diseña la estructura de microservicios para el proyecto [NOMBRE_PROYECTO], considerando escalabilidad y el stack [STACK_TECNOLOGICO].",
+        "updated_at": "2026-03-11T10:00:00"
+    },
+    {
+        "id": "20260311000002",
+        "title": "Optimización de Consultas SQL",
+        "category": "Python",
+        "tags": ["database", "sql", "performance"],
+        "content": "Analiza este script de Python con SQLAlchemy y sugiere mejoras de rendimiento para las consultas: [CODIGO_SQL].",
+        "updated_at": "2026-03-11T11:00:00"
+    },
+    {
+        "id": "20260311000003",
+        "title": "Guía de Estilo Branding",
+        "category": "Branding",
+        "tags": ["design", "brand", "identity"],
+        "content": "Genera un manifiesto de marca para [NOMBRE_MARCA], enfocándote en los valores de [VALORES_CORE].",
+        "updated_at": "2026-03-11T12:00:00"
+    },
+    {
+        "id": "20260311000004",
+        "title": "Experto en Pythonic Code",
+        "category": "Python",
+        "tags": ["clean code", "best practices", "refactoring"],
+        "content": "Revisa el siguiente fragmento de código Python: [CODIGO]. Aplica principios de Clean Code, elimina redundancias y asegúrate de que sea 'Pythonic'. Explica cada cambio realizado.",
+        "updated_at": "2026-03-11T14:00:00"
+    },
+    {
+        "id": "20260311000005",
+        "title": "Estratega de Contenido LinkedIn",
+        "category": "Branding",
+        "tags": ["social media", "copywriting", "personal brand"],
+        "content": "Crea una serie de 5 posts para LinkedIn sobre [TEMA_PRINCIPAL]. El tono debe ser profesional pero cercano, enfocado en generar autoridad en el sector de [INDUSTRIA]. Incluye ganchos (hooks) y CTAs claros.",
+        "updated_at": "2026-03-11T14:05:00"
+    },
+    {
+        "id": "20260311000006",
+        "title": "Documentador de API (Swagger)",
+        "category": "Ingeniería",
+        "tags": ["documentation", "api", "openapi"],
+        "content": "Genera la documentación OpenAPI 3.0 para los siguientes endpoints: [ENDPOINTS]. Incluye descripciones de parámetros, códigos de respuesta (200, 400, 500) y ejemplos de JSON de salida.",
+        "updated_at": "2026-03-11T14:10:00"
+    },
+    {
+        "id": "20260311000007",
+        "title": "IA Persona: Mentor de Negocios",
+        "category": "IA Persona",
+        "tags": ["mentorship", "startup", "strategy"],
+        "content": "Adopta la personalidad de un mentor de negocios exitoso con 20 años de experiencia. Ayúdame a validar mi idea de negocio: [IDEA]. Hazme 3 preguntas críticas que me ayuden a ver puntos ciegos en mi modelo de ingresos.",
+        "updated_at": "2026-03-11T14:15:00"
+    },
+    {
+        "id": "20260311000008",
+        "title": "Generador de Test Unitarios (Pytest)",
+        "category": "Python",
+        "tags": ["testing", "pytest", "qa"],
+        "content": "Escribe un conjunto completo de pruebas unitarias usando Pytest para la función: [FUNCION]. Cubre casos de éxito, errores esperados y valores límite (edge cases).",
+        "updated_at": "2026-03-11T14:20:00"
+    },
+    {
+        "id": "20260311000009",
+        "title": "Copywriter para Landing Pages",
+        "category": "Branding",
+        "tags": ["sales", "conversion", "copy"],
+        "content": "Escribe el texto para una landing page de alta conversión para [PRODUCTO_SERVICIO]. Utiliza la estructura AIDA (Atención, Interés, Deseo, Acción) y resalta el beneficio principal: [BENEFICIO_CLAVE].",
+        "updated_at": "2026-03-11T14:25:00"
+    },
+    {
+        "id": "20260311000010",
+        "title": "Analista de Logs y Errores",
+        "category": "Ingeniería",
+        "tags": ["debugging", "logs", "troubleshooting"],
+        "content": "Analiza el siguiente rastro de error (stack trace) o logs: [LOGS]. Identifica la causa raíz probable, sugiere una solución inmediata y una medida preventiva para el futuro.",
+        "updated_at": "2026-03-11T14:30:00"
+    },
+    {
+        "id": "20260311000011",
+        "title": "Especialista en SEO Técnico",
+        "category": "Branding",
+        "tags": ["seo", "marketing", "web"],
+        "content": "Realiza una auditoría de SEO técnico para el sitio web [URL]. Enfócate en Core Web Vitals, estructura de encabezados H1-H3 y optimización de metadatos para la keyword: [KEYWORD].",
+        "updated_at": "2026-03-11T14:35:00"
+    },
+    {
+        "id": "20260311000012",
+        "title": "Generador de Scripts de Automatización",
+        "category": "Python",
+        "tags": ["automation", "scripts", "productivity"],
+        "content": "Crea un script en Python que automatice la siguiente tarea: [DESCRIPCION_TAREA]. Utiliza librerías estándar siempre que sea posible y añade comentarios explicativos en cada bloque de código.",
+        "updated_at": "2026-03-11T14:40:00"
+    },
+    {
+        "id": "20260311000013",
+        "title": "IA Persona: Tutor de Programación",
+        "category": "IA Persona",
+        "tags": ["education", "coding", "learning"],
+        "content": "Eres un tutor de programación paciente y didáctico. Explícame el concepto de [CONCEPTO] como si tuviera 10 años, usando una analogía del mundo real. Luego, dame un ejemplo simple en código.",
+        "updated_at": "2026-03-11T14:45:00"
+    },
+    {
+        "id": "20260311000014",
+        "title": "Diseñador de Arquitectura Cloud",
+        "category": "Ingeniería",
+        "tags": ["cloud", "aws", "infrastructure"],
+        "content": "Diseña una infraestructura en [AWS/AZURE/GCP] para una aplicación que requiere alta disponibilidad y manejo de picos de tráfico. Describe los servicios necesarios para computación, base de datos y CDN.",
+        "updated_at": "2026-03-11T14:50:00"
+    },
+    {
+        "id": "20260311000015",
+        "title": "Escritor de Casos de Uso (User Stories)",
+        "category": "Ingeniería",
+        "tags": ["agile", "product", "requirements"],
+        "content": "Redacta 5 Historias de Usuario para la funcionalidad [FUNCIONALIDAD] siguiendo el formato: 'Como [ROL], quiero [ACCION], para [BENEFICIO]'. Incluye criterios de aceptación para cada una.",
+        "updated_at": "2026-03-11T14:55:00"
+    },
+    {
+        "id": "20260311000016",
+        "title": "Generador de Nombres de Marca",
+        "category": "Branding",
+        "tags": ["naming", "creative", "startup"],
+        "content": "Sugiere 15 nombres creativos y memorables para una nueva empresa de [SECTOR]. Los nombres deben transmitir [EMOCION/VALOR] y estar disponibles (aparentemente) para dominios .com o .io.",
+        "updated_at": "2026-03-11T15:00:00"
+    },
+    {
+        "id": "20260311000017",
+        "title": "Convertidor de Código (JS a Python)",
+        "category": "Python",
+        "tags": ["conversion", "javascript", "refactoring"],
+        "content": "Traduce el siguiente código de JavaScript a Python 3.10+: [CODIGO_JS]. Asegúrate de usar las estructuras de datos equivalentes más eficientes y seguir PEP 8.",
+        "updated_at": "2026-03-11T15:05:00"
+    },
+    {
+        "id": "20260311000018",
+        "title": "IA Persona: Entrevistador Técnico",
+        "category": "IA Persona",
+        "tags": ["interview", "career", "hr"],
+        "content": "Actúa como un entrevistador técnico de una empresa Top Tech (FAANG). Entrevístame para la posición de [PUESTO]. Empieza saludando y lanzándome la primera pregunta técnica sobre [TEMA].",
+        "updated_at": "2026-03-11T15:10:00"
+    },
+    {
+        "id": "20260311000019",
+        "title": "Optimizador de Perfil de GitHub",
+        "category": "Branding",
+        "tags": ["portfolio", "github", "career"],
+        "content": "Analiza la descripción de mi proyecto: [DESCRIPCION]. Genera un archivo README.md profesional que incluya secciones de Instalación, Uso, Tecnologías y una sección de 'Contribución' atractiva.",
+        "updated_at": "2026-03-11T15:15:00"
+    },
+    {
+        "id": "20260311000020",
+        "title": "Analista de Seguridad de Código",
+        "category": "Ingeniería",
+        "tags": ["security", "cybersecurity", "audit"],
+        "content": "Escanea el siguiente fragmento de código en busca de vulnerabilidades comunes (OWASP Top 10): [CODIGO]. Identifica posibles inyecciones SQL, XSS o fugas de datos y sugiere la corrección.",
+        "updated_at": "2026-03-11T15:20:00"
+    },
+    {
+        "id": "20260311000021",
+        "title": "Planificador de Roadmaps de Producto",
+        "category": "Ingeniería",
+        "tags": ["product management", "strategy", "planning"],
+        "content": "Crea un roadmap de producto para los próximos 6 meses para [PROYECTO]. Divide las tareas en Q1 y Q2, priorizando por impacto y esfuerzo técnico.",
+        "updated_at": "2026-03-11T15:25:00"
+    },
+    {
+        "id": "20260311000022",
+        "title": "Generador de Prompt para Midjourney",
+        "category": "IA Persona",
+        "tags": ["art", "midjourney", "creative"],
+        "content": "Crea un prompt altamente detallado para Midjourney v6 basado en la idea: [IDEA_IMAGEN]. Incluye parámetros de iluminación, estilo artístico (ej. cyberpunk, minimalista), tipo de lente y relación de aspecto --ar [ASPECT_RATIO].",
+        "updated_at": "2026-03-11T15:30:00"
+    }
+]

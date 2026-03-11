@@ -1,0 +1,5 @@
+{
+    "db_path": "prompts.json",
+    "default_cat": "Ingeniería",
+    "forbidden": "admin, root, password"
+}
