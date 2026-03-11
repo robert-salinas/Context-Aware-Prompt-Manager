@@ -161,3 +161,4 @@ Thumbs.db
 # Project specific
 .prompts/
 prompts.db
+pytest-of-Robert Esteban/pytest-3/test_search_prompts0/test_project/
