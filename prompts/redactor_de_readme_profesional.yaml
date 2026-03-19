@@ -1,0 +1,16 @@
+name: Redactor de README Profesional
+description: Escribe un README estructurado a partir de notas de código.
+template: 'Actúa con un Technical Writer. Redacta un archivo `README.md` profesional
+  para un proyecto de {{ tech_stack | join('', '') }} con los siguientes detalles:
+
+
+  Descripción: {{ description }}
+
+  Características: {{ features }}
+
+  Instalación: {{ install_steps }}'
+tags:
+- Docs
+- Marketing
+- Showcase
+version: 1.0.0
