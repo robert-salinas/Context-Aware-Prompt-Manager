@@ -1,0 +1,16 @@
+name: Refactorizador de Código
+description: Analiza la complejidad y sugiere mejoras de rendimiento.
+template: 'Actúa como un Senior Developer. Analiza el siguiente código {{ tech_stack
+  | join('', '') }} y sugiere refactorizaciones para mejorar la legibilidad y rendimiento:
+
+
+  ```python
+
+  [INSERTA CÓDIGO]
+
+  ```'
+tags:
+- Refactor
+- Calidad
+- Clean Code
+version: 1.0.0
