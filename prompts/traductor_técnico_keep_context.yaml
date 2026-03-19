@@ -1,0 +1,15 @@
+name: Traductor Técnico (Keep Context)
+description: Traduce código o documentación manteniendo la terminología técnica intacta.
+template: 'Traduce el siguiente texto al {{ target_lang | default(''Español'') }}.
+  Respeta los términos técnicos, nombres de variables y bloques de código de {{ tech_stack
+  | join('', '') }}:
+
+
+  Texto:
+
+  {{ text }}'
+tags:
+- Traducción
+- Documentación
+- Global
+version: 1.0.0
