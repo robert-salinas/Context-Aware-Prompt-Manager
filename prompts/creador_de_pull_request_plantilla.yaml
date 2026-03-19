@@ -1,0 +1,20 @@
+name: Creador de Pull Request (Plantilla)
+description: Formula la descripción de un PR detallando los cambios y el impacto.
+template: 'Escribe la descripción para un Pull Request (PR) en el proyecto {{ project_name
+  }}. Debe incluir:
+
+  1. 🎯 Propósito del cambio
+
+  2. 🛠️ Qué se modificó
+
+  3. 🧪 Cómo se probó
+
+
+  Detalles del cambio:
+
+  {{ pr_details }}'
+tags:
+- Git
+- PR
+- Colaboración
+version: 1.0.0
