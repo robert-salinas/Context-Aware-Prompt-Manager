@@ -29,7 +29,7 @@ if not exist ".venv" (
 echo [INFO] Iniciando RS Prompt Manager... 
 :: Usamos PYTHONPATH para asegurar que encuentre el paquete prompt_mgr
 set PYTHONPATH=src
-start /b pythonw src/prompt_mgr/gui.py 
+start /b pythonw -m prompt_mgr.gui 
  
 :: 3. (Opcional) Crear acceso directo en el escritorio si no existe 
 if not exist "%USERPROFILE%\Desktop\RS Prompt Manager.lnk" ( 

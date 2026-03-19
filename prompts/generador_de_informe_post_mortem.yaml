@@ -1,0 +1,11 @@
+description: 'Categoría: Ingeniería'
+name: Generador de Informe Post-Mortem
+tags:
+- Ingeniería
+- incident
+- post-mortem
+- sre
+template: 'Redacta un post-mortem blameless para el siguiente incidente: {{ descripcion_incidente
+  }}. Estructura: timeline de eventos (con horas exactas), causa raíz (5 Whys), impacto
+  en usuarios, qué salió bien, qué falló y action items con owners y deadlines.'
+version: 1.0.0

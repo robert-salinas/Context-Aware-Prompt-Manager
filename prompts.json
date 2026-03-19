@@ -3,7 +3,11 @@
         "id": "20260311000001",
         "title": "Arquitectura de Microservicios",
         "category": "Ingeniería",
-        "tags": ["backend", "microservices", "patterns"],
+        "tags": [
+            "backend",
+            "microservices",
+            "patterns"
+        ],
         "content": "Actúa como un arquitecto senior. Diseña la estructura de microservicios para el proyecto [NOMBRE_PROYECTO], considerando escalabilidad y el stack [STACK_TECNOLOGICO].",
         "updated_at": "2026-03-11T10:00:00"
     },
@@ -11,7 +15,11 @@
         "id": "20260311000002",
         "title": "Optimización de Consultas SQL",
         "category": "Python",
-        "tags": ["database", "sql", "performance"],
+        "tags": [
+            "database",
+            "sql",
+            "performance"
+        ],
         "content": "Analiza este script de Python con SQLAlchemy y sugiere mejoras de rendimiento para las consultas: [CODIGO_SQL].",
         "updated_at": "2026-03-11T11:00:00"
     },
@@ -19,7 +27,11 @@
         "id": "20260311000003",
         "title": "Guía de Estilo Branding",
         "category": "Branding",
-        "tags": ["design", "brand", "identity"],
+        "tags": [
+            "design",
+            "brand",
+            "identity"
+        ],
         "content": "Genera un manifiesto de marca para [NOMBRE_MARCA], enfocándote en los valores de [VALORES_CORE].",
         "updated_at": "2026-03-11T12:00:00"
     },
@@ -27,7 +39,11 @@
         "id": "20260311000004",
         "title": "Experto en Pythonic Code",
         "category": "Python",
-        "tags": ["clean code", "best practices", "refactoring"],
+        "tags": [
+            "clean code",
+            "best practices",
+            "refactoring"
+        ],
         "content": "Revisa el siguiente fragmento de código Python: [CODIGO]. Aplica principios de Clean Code, elimina redundancias y asegúrate de que sea 'Pythonic'. Explica cada cambio realizado.",
         "updated_at": "2026-03-11T14:00:00"
     },
@@ -35,7 +51,11 @@
         "id": "20260311000005",
         "title": "Estratega de Contenido LinkedIn",
         "category": "Branding",
-        "tags": ["social media", "copywriting", "personal brand"],
+        "tags": [
+            "social media",
+            "copywriting",
+            "personal brand"
+        ],
         "content": "Crea una serie de 5 posts para LinkedIn sobre [TEMA_PRINCIPAL]. El tono debe ser profesional pero cercano, enfocado en generar autoridad en el sector de [INDUSTRIA]. Incluye ganchos (hooks) y CTAs claros.",
         "updated_at": "2026-03-11T14:05:00"
     },
@@ -43,7 +63,11 @@
         "id": "20260311000006",
         "title": "Documentador de API (Swagger)",
         "category": "Ingeniería",
-        "tags": ["documentation", "api", "openapi"],
+        "tags": [
+            "documentation",
+            "api",
+            "openapi"
+        ],
         "content": "Genera la documentación OpenAPI 3.0 para los siguientes endpoints: [ENDPOINTS]. Incluye descripciones de parámetros, códigos de respuesta (200, 400, 500) y ejemplos de JSON de salida.",
         "updated_at": "2026-03-11T14:10:00"
     },
@@ -51,7 +75,11 @@
         "id": "20260311000007",
         "title": "IA Persona: Mentor de Negocios",
         "category": "IA Persona",
-        "tags": ["mentorship", "startup", "strategy"],
+        "tags": [
+            "mentorship",
+            "startup",
+            "strategy"
+        ],
         "content": "Adopta la personalidad de un mentor de negocios exitoso con 20 años de experiencia. Ayúdame a validar mi idea de negocio: [IDEA]. Hazme 3 preguntas críticas que me ayuden a ver puntos ciegos en mi modelo de ingresos.",
         "updated_at": "2026-03-11T14:15:00"
     },
@@ -59,7 +87,11 @@
         "id": "20260311000008",
         "title": "Generador de Test Unitarios (Pytest)",
         "category": "Python",
-        "tags": ["testing", "pytest", "qa"],
+        "tags": [
+            "testing",
+            "pytest",
+            "qa"
+        ],
         "content": "Escribe un conjunto completo de pruebas unitarias usando Pytest para la función: [FUNCION]. Cubre casos de éxito, errores esperados y valores límite (edge cases).",
         "updated_at": "2026-03-11T14:20:00"
     },
@@ -67,7 +99,11 @@
         "id": "20260311000009",
         "title": "Copywriter para Landing Pages",
         "category": "Branding",
-        "tags": ["sales", "conversion", "copy"],
+        "tags": [
+            "sales",
+            "conversion",
+            "copy"
+        ],
         "content": "Escribe el texto para una landing page de alta conversión para [PRODUCTO_SERVICIO]. Utiliza la estructura AIDA (Atención, Interés, Deseo, Acción) y resalta el beneficio principal: [BENEFICIO_CLAVE].",
         "updated_at": "2026-03-11T14:25:00"
     },
@@ -75,7 +111,11 @@
         "id": "20260311000010",
         "title": "Analista de Logs y Errores",
         "category": "Ingeniería",
-        "tags": ["debugging", "logs", "troubleshooting"],
+        "tags": [
+            "debugging",
+            "logs",
+            "troubleshooting"
+        ],
         "content": "Analiza el siguiente rastro de error (stack trace) o logs: [LOGS]. Identifica la causa raíz probable, sugiere una solución inmediata y una medida preventiva para el futuro.",
         "updated_at": "2026-03-11T14:30:00"
     },
@@ -83,7 +123,11 @@
         "id": "20260311000011",
         "title": "Especialista en SEO Técnico",
         "category": "Branding",
-        "tags": ["seo", "marketing", "web"],
+        "tags": [
+            "seo",
+            "marketing",
+            "web"
+        ],
         "content": "Realiza una auditoría de SEO técnico para el sitio web [URL]. Enfócate en Core Web Vitals, estructura de encabezados H1-H3 y optimización de metadatos para la keyword: [KEYWORD].",
         "updated_at": "2026-03-11T14:35:00"
     },
@@ -91,7 +135,11 @@
         "id": "20260311000012",
         "title": "Generador de Scripts de Automatización",
         "category": "Python",
-        "tags": ["automation", "scripts", "productivity"],
+        "tags": [
+            "automation",
+            "scripts",
+            "productivity"
+        ],
         "content": "Crea un script en Python que automatice la siguiente tarea: [DESCRIPCION_TAREA]. Utiliza librerías estándar siempre que sea posible y añade comentarios explicativos en cada bloque de código.",
         "updated_at": "2026-03-11T14:40:00"
     },
@@ -99,7 +147,11 @@
         "id": "20260311000013",
         "title": "IA Persona: Tutor de Programación",
         "category": "IA Persona",
-        "tags": ["education", "coding", "learning"],
+        "tags": [
+            "education",
+            "coding",
+            "learning"
+        ],
         "content": "Eres un tutor de programación paciente y didáctico. Explícame el concepto de [CONCEPTO] como si tuviera 10 años, usando una analogía del mundo real. Luego, dame un ejemplo simple en código.",
         "updated_at": "2026-03-11T14:45:00"
     },
@@ -107,7 +159,11 @@
         "id": "20260311000014",
         "title": "Diseñador de Arquitectura Cloud",
         "category": "Ingeniería",
-        "tags": ["cloud", "aws", "infrastructure"],
+        "tags": [
+            "cloud",
+            "aws",
+            "infrastructure"
+        ],
         "content": "Diseña una infraestructura en [AWS/AZURE/GCP] para una aplicación que requiere alta disponibilidad y manejo de picos de tráfico. Describe los servicios necesarios para computación, base de datos y CDN.",
         "updated_at": "2026-03-11T14:50:00"
     },
@@ -115,7 +171,11 @@
         "id": "20260311000015",
         "title": "Escritor de Casos de Uso (User Stories)",
         "category": "Ingeniería",
-        "tags": ["agile", "product", "requirements"],
+        "tags": [
+            "agile",
+            "product",
+            "requirements"
+        ],
         "content": "Redacta 5 Historias de Usuario para la funcionalidad [FUNCIONALIDAD] siguiendo el formato: 'Como [ROL], quiero [ACCION], para [BENEFICIO]'. Incluye criterios de aceptación para cada una.",
         "updated_at": "2026-03-11T14:55:00"
     },
@@ -123,7 +183,11 @@
         "id": "20260311000016",
         "title": "Generador de Nombres de Marca",
         "category": "Branding",
-        "tags": ["naming", "creative", "startup"],
+        "tags": [
+            "naming",
+            "creative",
+            "startup"
+        ],
         "content": "Sugiere 15 nombres creativos y memorables para una nueva empresa de [SECTOR]. Los nombres deben transmitir [EMOCION/VALOR] y estar disponibles (aparentemente) para dominios .com o .io.",
         "updated_at": "2026-03-11T15:00:00"
     },
@@ -131,7 +195,11 @@
         "id": "20260311000017",
         "title": "Convertidor de Código (JS a Python)",
         "category": "Python",
-        "tags": ["conversion", "javascript", "refactoring"],
+        "tags": [
+            "conversion",
+            "javascript",
+            "refactoring"
+        ],
         "content": "Traduce el siguiente código de JavaScript a Python 3.10+: [CODIGO_JS]. Asegúrate de usar las estructuras de datos equivalentes más eficientes y seguir PEP 8.",
         "updated_at": "2026-03-11T15:05:00"
     },
@@ -139,7 +207,11 @@
         "id": "20260311000018",
         "title": "IA Persona: Entrevistador Técnico",
         "category": "IA Persona",
-        "tags": ["interview", "career", "hr"],
+        "tags": [
+            "interview",
+            "career",
+            "hr"
+        ],
         "content": "Actúa como un entrevistador técnico de una empresa Top Tech (FAANG). Entrevístame para la posición de [PUESTO]. Empieza saludando y lanzándome la primera pregunta técnica sobre [TEMA].",
         "updated_at": "2026-03-11T15:10:00"
     },
@@ -147,7 +219,11 @@
         "id": "20260311000019",
         "title": "Optimizador de Perfil de GitHub",
         "category": "Branding",
-        "tags": ["portfolio", "github", "career"],
+        "tags": [
+            "portfolio",
+            "github",
+            "career"
+        ],
         "content": "Analiza la descripción de mi proyecto: [DESCRIPCION]. Genera un archivo README.md profesional que incluya secciones de Instalación, Uso, Tecnologías y una sección de 'Contribución' atractiva.",
         "updated_at": "2026-03-11T15:15:00"
     },
@@ -155,7 +231,11 @@
         "id": "20260311000020",
         "title": "Analista de Seguridad de Código",
         "category": "Ingeniería",
-        "tags": ["security", "cybersecurity", "audit"],
+        "tags": [
+            "security",
+            "cybersecurity",
+            "audit"
+        ],
         "content": "Escanea el siguiente fragmento de código en busca de vulnerabilidades comunes (OWASP Top 10): [CODIGO]. Identifica posibles inyecciones SQL, XSS o fugas de datos y sugiere la corrección.",
         "updated_at": "2026-03-11T15:20:00"
     },
@@ -163,7 +243,11 @@
         "id": "20260311000021",
         "title": "Planificador de Roadmaps de Producto",
         "category": "Ingeniería",
-        "tags": ["product management", "strategy", "planning"],
+        "tags": [
+            "product management",
+            "strategy",
+            "planning"
+        ],
         "content": "Crea un roadmap de producto para los próximos 6 meses para [PROYECTO]. Divide las tareas en Q1 y Q2, priorizando por impacto y esfuerzo técnico.",
         "updated_at": "2026-03-11T15:25:00"
     },
@@ -171,8 +255,288 @@
         "id": "20260311000022",
         "title": "Generador de Prompt para Midjourney",
         "category": "IA Persona",
-        "tags": ["art", "midjourney", "creative"],
+        "tags": [
+            "art",
+            "midjourney",
+            "creative"
+        ],
         "content": "Crea un prompt altamente detallado para Midjourney v6 basado en la idea: [IDEA_IMAGEN]. Incluye parámetros de iluminación, estilo artístico (ej. cyberpunk, minimalista), tipo de lente y relación de aspecto --ar [ASPECT_RATIO].",
         "updated_at": "2026-03-11T15:30:00"
+    },
+    {
+        "id": "20260311000023",
+        "title": "Generador de Mock Data Realista",
+        "category": "Python",
+        "tags": [
+            "testing",
+            "faker",
+            "fixtures"
+        ],
+        "content": "Crea un script Python usando Faker para generar [CANTIDAD] registros de datos de prueba realistas para el modelo [DESCRIPCION_MODELO]. Incluye semilla fija para reproducibilidad y exporta a [JSON/CSV/SQLite].",
+        "updated_at": "2026-03-11T17:15:00"
+    },
+    {
+        "id": "20260311000044",
+        "title": "Diseñador de Sistema de Caché",
+        "category": "Ingeniería",
+        "tags": [
+            "cache",
+            "redis",
+            "performance"
+        ],
+        "content": "Diseña la estrategia de caché para [SERVICIO/API] usando Redis. Define políticas de TTL, estrategias de invalidación (cache-aside, write-through), manejo de cache stampede y estructura de keys para [CASO_USO].",
+        "updated_at": "2026-03-11T17:20:00"
+    },
+    {
+        "id": "20260311000045",
+        "title": "Experto en Expresiones Regulares",
+        "category": "Python",
+        "tags": [
+            "regex",
+            "parsing",
+            "text"
+        ],
+        "content": "Construye una expresión regular para capturar [PATRON_DESCRIPCION] en texto. Explica cada parte del patrón, proporciona casos de prueba (match y no-match) y escribe la implementación en Python con re o regex.",
+        "updated_at": "2026-03-11T17:25:00"
+    },
+    {
+        "id": "20260311000046",
+        "title": "Creador de Webhook Handler",
+        "category": "Python",
+        "tags": [
+            "webhooks",
+            "fastapi",
+            "integrations"
+        ],
+        "content": "Implementa un handler de webhooks en FastAPI para recibir eventos de [SERVICIO: Stripe/GitHub/Slack]. Incluye verificación de firma HMAC, manejo idempotente de eventos, cola de reintentos y logging estructurado.",
+        "updated_at": "2026-03-11T17:30:00"
+    },
+    {
+        "id": "20260311000047",
+        "title": "Optimizador de Imágenes Docker",
+        "category": "Ingeniería",
+        "tags": [
+            "docker",
+            "optimization",
+            "devops"
+        ],
+        "content": "Analiza este Dockerfile: [DOCKERFILE]. Identifica capas ineficientes, dependencias innecesarias en la imagen final y reescríbelo usando multi-stage builds para reducir el tamaño al mínimo posible.",
+        "updated_at": "2026-03-11T17:35:00"
+    },
+    {
+        "id": "20260311000048",
+        "title": "Consultor de Modelo de Pricing SaaS",
+        "category": "Branding",
+        "tags": [
+            "saas",
+            "pricing",
+            "business model"
+        ],
+        "content": "Diseña 3 tiers de pricing (Free, Pro, Enterprise) para el producto SaaS [DESCRIPCION_PRODUCTO]. Define qué features incluye cada tier, los límites de uso (seats, API calls, storage) y justifica la estrategia de value-based pricing.",
+        "updated_at": "2026-03-11T17:40:00"
+    },
+    {
+        "id": "20260311000049",
+        "title": "Generador de Onboarding Email Sequence",
+        "category": "Branding",
+        "tags": [
+            "email marketing",
+            "retention",
+            "saas"
+        ],
+        "content": "Escribe una secuencia de 5 emails de onboarding para usuarios nuevos de [PRODUCTO]. Email 1: bienvenida y quick win. Emails 2-4: activación de features clave. Email 5: social proof y upgrade CTA. Incluye asunto y preheader para cada uno.",
+        "updated_at": "2026-03-11T17:45:00"
+    },
+    {
+        "id": "20260311000050",
+        "title": "Analista de Métricas de Producto",
+        "category": "Ingeniería",
+        "tags": [
+            "analytics",
+            "kpi",
+            "product"
+        ],
+        "content": "Define el plan de métricas (North Star Metric, métricas de input y guardrail metrics) para [TIPO_PRODUCTO]. Para cada métrica explica cómo medirla, la query SQL/evento de tracking necesario y el target inicial.",
+        "updated_at": "2026-03-11T17:50:00"
+    },
+    {
+        "id": "20260311000051",
+        "title": "Creador de Design System Tokens",
+        "category": "Branding",
+        "tags": [
+            "design system",
+            "css",
+            "tokens"
+        ],
+        "content": "Define los design tokens para el sistema de diseño de [MARCA]. Incluye paleta de colores con variantes (primary, secondary, neutral, semantic), escala tipográfica, espaciado, border-radius y sombras. Exporta en formato CSS custom properties y JSON.",
+        "updated_at": "2026-03-11T17:55:00"
+    },
+    {
+        "id": "20260311000052",
+        "title": "Experto en Patrones de Diseño Python",
+        "category": "Python",
+        "tags": [
+            "design patterns",
+            "oop",
+            "architecture"
+        ],
+        "content": "Implementa el patrón de diseño [PATRON: Singleton/Observer/Factory/Strategy/Decorator] en Python para resolver el siguiente problema: [DESCRIPCION_PROBLEMA]. Muestra también el anti-patrón que esto reemplaza.",
+        "updated_at": "2026-03-11T18:00:00"
+    },
+    {
+        "id": "20260311000053",
+        "title": "IA Persona: Devil's Advocate",
+        "category": "IA Persona",
+        "tags": [
+            "critical thinking",
+            "strategy",
+            "analysis"
+        ],
+        "content": "Actúa como el 'abogado del diablo' de mis decisiones. Analiza mi plan: [PLAN]. Construye el argumento más fuerte posible en CONTRA de cada supuesto clave. No seas condescendiente, sé brutalmente lógico y señala los riesgos que estoy ignorando.",
+        "updated_at": "2026-03-11T18:05:00"
+    },
+    {
+        "id": "20260311000054",
+        "title": "IA Persona: Data Scientist Senior",
+        "category": "IA Persona",
+        "tags": [
+            "data science",
+            "ml",
+            "analysis"
+        ],
+        "content": "Eres un Data Scientist Senior. Tengo este dataset: [DESCRIPCION_DATASET]. Guíame en el EDA (Exploratory Data Analysis) inicial: qué distribuciones revisar, outliers a detectar, correlaciones relevantes y qué modelo predictivo probarías primero y por qué.",
+        "updated_at": "2026-03-11T18:10:00"
+    },
+    {
+        "id": "20260311000055",
+        "title": "Generador de Infraestructura como Código (Terraform)",
+        "category": "Ingeniería",
+        "tags": [
+            "terraform",
+            "iac",
+            "cloud"
+        ],
+        "content": "Escribe los módulos de Terraform para desplegar [INFRAESTRUCTURA] en [AWS/GCP/Azure]. Incluye variables parametrizadas, outputs, estado remoto en S3/GCS y sigue las convenciones de naming del proyecto [NOMBRE].",
+        "updated_at": "2026-03-11T18:15:00"
+    },
+    {
+        "id": "20260311000056",
+        "title": "Generador de Política de Rate Limiting",
+        "category": "Ingeniería",
+        "tags": [
+            "api",
+            "rate limiting",
+            "security"
+        ],
+        "content": "Diseña e implementa una política de rate limiting para la API [NOMBRE_API] usando el algoritmo [Token Bucket/Sliding Window/Fixed Window]. Incluye diferenciación por tier de usuario, headers de respuesta estándar y manejo de bursts.",
+        "updated_at": "2026-03-11T18:20:00"
+    },
+    {
+        "id": "20260311000057",
+        "title": "Traductor de Requisitos a Arquitectura",
+        "category": "Ingeniería",
+        "tags": [
+            "architecture",
+            "requirements",
+            "design"
+        ],
+        "content": "Tengo los siguientes requisitos de negocio: [REQUISITOS]. Tradúcelos a decisiones de arquitectura técnica. Para cada requisito no funcional (performance, availability, scalability) especifica el patrón arquitectónico que aplicarías y por qué.",
+        "updated_at": "2026-03-11T18:25:00"
+    },
+    {
+        "id": "20260311000058",
+        "title": "Creador de Estrategia de Branching Git",
+        "category": "Ingeniería",
+        "tags": [
+            "git",
+            "workflow",
+            "team"
+        ],
+        "content": "Define la estrategia de branching Git para el equipo de [NOMBRE_PROYECTO] con [N] desarrolladores. Compara GitFlow vs trunk-based development para nuestro contexto, define las convenciones de nombres de ramas y el proceso de merge/PR.",
+        "updated_at": "2026-03-11T18:30:00"
+    },
+    {
+        "id": "20260311000059",
+        "title": "Generador de Prompts de Sistema para LLMs",
+        "category": "IA Persona",
+        "tags": [
+            "prompting",
+            "llm",
+            "system prompt"
+        ],
+        "content": "Diseña un system prompt robusto para un agente de IA cuya función es [FUNCION_AGENTE]. Define el rol, restricciones explícitas de lo que NO debe hacer, formato de respuesta esperado y 3 ejemplos few-shot de interacciones ideales.",
+        "updated_at": "2026-03-11T18:35:00"
+    },
+    {
+        "id": "20260311000060",
+        "title": "Evaluador de Product-Market Fit",
+        "category": "IA Persona",
+        "tags": [
+            "pmf",
+            "startup",
+            "validation"
+        ],
+        "content": "Actúa como un experto en Product-Market Fit. Analiza las siguientes métricas de mi producto: [METRICAS]. Determina en qué punto del espectro PMF estoy (pre-PMF, searching, found), qué señal me falta y cuál sería el próximo experimento a correr.",
+        "updated_at": "2026-03-11T18:40:00"
+    },
+    {
+        "id": "20260311000061",
+        "title": "Escritor de Comunicados de Crisis",
+        "category": "Branding",
+        "tags": [
+            "crisis communication",
+            "pr",
+            "copywriting"
+        ],
+        "content": "Redacta un comunicado de crisis para [EMPRESA] ante el siguiente incidente: [DESCRIPCION_INCIDENTE]. Sigue el framework: reconocimiento, responsabilidad, impacto en usuarios, acciones tomadas y medidas preventivas futuras. Tono: transparente y empático.",
+        "updated_at": "2026-03-11T18:45:00"
+    },
+    {
+        "id": "20260311000062",
+        "title": "Generador de Matriz de Riesgos Técnicos",
+        "category": "Ingeniería",
+        "tags": [
+            "risk management",
+            "planning",
+            "architecture"
+        ],
+        "content": "Genera una matriz de riesgos técnicos para el proyecto [NOMBRE]. Para cada riesgo identifica: probabilidad (1-5), impacto (1-5), score de criticidad, owner responsable, plan de mitigación y plan de contingencia. Cubre al menos 10 riesgos típicos del stack [STACK].",
+        "updated_at": "2026-03-11T18:50:00"
+    },
+    {
+        "id": "20260311000063",
+        "title": "Especialista en Accesibilidad Web (WCAG)",
+        "category": "Ingeniería",
+        "tags": [
+            "accessibility",
+            "wcag",
+            "frontend"
+        ],
+        "content": "Audita el siguiente componente HTML/React: [CODIGO]. Evalúa el cumplimiento de WCAG 2.1 AA, identifica problemas de contraste, navegación por teclado, ARIA roles faltantes y screen reader compatibility. Proporciona el código corregido.",
+        "updated_at": "2026-03-11T18:55:00"
+    },
+    {
+        "id": "20260311000064",
+        "title": "Creador de Plan de Disaster Recovery",
+        "category": "Ingeniería",
+        "tags": [
+            "disaster recovery",
+            "backup",
+            "infrastructure"
+        ],
+        "content": "Diseña el plan de Disaster Recovery para [SISTEMA]. Define RTO y RPO target, estrategia de backup (frecuencia, retención, verificación), runbook de recuperación paso a paso y procedimiento de prueba del DR cada [FRECUENCIA].",
+        "updated_at": "2026-03-11T18:55:00"
+    },
+    {
+        "id": "20260311000065",
+        "title": "Generador de Informe Post-Mortem",
+        "category": "Ingeniería",
+        "tags": [
+            "incident",
+            "post-mortem",
+            "sre"
+        ],
+        "content": "Redacta un post-mortem blameless para el siguiente incidente: [DESCRIPCION_INCIDENTE]. Estructura: timeline de eventos (con horas exactas), causa raíz (5 Whys), impacto en usuarios, qué salió bien, qué falló y action items con owners y deadlines.",
+        "updated_at": "2026-03-11T19:00:00"
     }
 ]

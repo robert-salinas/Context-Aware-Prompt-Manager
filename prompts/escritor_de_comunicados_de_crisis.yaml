@@ -1,0 +1,12 @@
+description: 'Categoría: Branding'
+name: Escritor de Comunicados de Crisis
+tags:
+- Branding
+- crisis communication
+- pr
+- copywriting
+template: 'Redacta un comunicado de crisis para {{ empresa }} ante el siguiente incidente:
+  {{ descripcion_incidente }}. Sigue el framework: reconocimiento, responsabilidad,
+  impacto en usuarios, acciones tomadas y medidas preventivas futuras. Tono: transparente
+  y empático.'
+version: 1.0.0

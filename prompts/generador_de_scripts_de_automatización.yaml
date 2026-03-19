@@ -1,11 +1,11 @@
-name: Generador de Scripts de Automatización
 description: 'Categoría: Python'
-template: 'Crea un script en Python que automatice la siguiente tarea: {{ descripcion_tarea
-  }}. Utiliza librerías estándar siempre que sea posible y añade comentarios explicativos
-  en cada bloque de código.'
+name: Generador de Scripts de Automatización
 tags:
 - Python
 - automation
 - scripts
 - productivity
+template: 'Crea un script en Python que automatice la siguiente tarea: {{ descripcion_tarea
+  }}. Utiliza librerías estándar siempre que sea posible y añade comentarios explicativos
+  en cada bloque de código.'
 version: 1.0.0

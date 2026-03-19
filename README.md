@@ -56,12 +56,36 @@ prompt-mgr context
 prompt-mgr diff refactor.yaml
 ```
 
+---
+
+## 🖥️ Interfaz Gráfica (GUI)
+Para una experiencia visual e interactiva de ingeniería de prompts, puedes lanzar la aplicación de escritorio:
+
+### Ejecución
+```bash
+# En Windows (Launcher Automático)
+./run_app.bat
+
+# Alternativo (Manual)
+set PYTHONPATH=src
+python -m prompt_mgr.gui
+```
+
+### Características de la GUI
+*   📂 **Catálogo:** Explora, busca y copia prompts con un clic mediante Toasts no bloqueantes.
+*   🧠 **Contexto Activo:** Visualiza en vivo qué tecnologías, tests y estructura detecta la herramienta en tu PC.
+*   🏷️ **Etiquetas (Pills):** Organiza tus prompts de forma visual y moderna.
+*   ⚙️ **Configuración:** Ajusta rutas de bases de datos y filtros de seguridad.
+
+---
+
 ## 📝 Estructura de Decisiones (ADR)
 El proyecto mantiene registros estructurados (Architecture Decision Records) para asegurar el rigor arquitectónico:
 
 - **ADR-0001: Git como almacenamiento:** Justificación del uso de Git para el versionado nativo de prompts.
 - **ADR-0002: Estrategia de extracción de contexto:** Racional detrás de la detección automática de stacks.
 - **ADR-0003: Implementación de búsqueda:** Diseño del sistema FTS con SQLite.
+- **ADR-0004: Integración GUI con Backend:** Acoplamiento de la app visual a la lógica core (Git, FTS5, Jinja2).
 
 ### Estados Soportados:
 - **Proposed:** La decisión está en fase de revisión.

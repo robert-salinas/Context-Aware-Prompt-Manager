@@ -1,0 +1,12 @@
+description: 'Categoría: Ingeniería'
+name: Generador de Matriz de Riesgos Técnicos
+tags:
+- Ingeniería
+- risk management
+- planning
+- architecture
+template: 'Genera una matriz de riesgos técnicos para el proyecto {{ nombre }}. Para
+  cada riesgo identifica: probabilidad (1-5), impacto (1-5), score de criticidad,
+  owner responsable, plan de mitigación y plan de contingencia. Cubre al menos 10
+  riesgos típicos del stack {{ stack }}.'
+version: 1.0.0

@@ -1,0 +1,11 @@
+description: 'Categoría: Ingeniería'
+name: Creador de Estrategia de Branching Git
+tags:
+- Ingeniería
+- git
+- workflow
+- team
+template: Define la estrategia de branching Git para el equipo de {{ nombre_proyecto
+  }} con {{ n }} desarrolladores. Compara GitFlow vs trunk-based development para
+  nuestro contexto, define las convenciones de nombres de ramas y el proceso de merge/PR.
+version: 1.0.0

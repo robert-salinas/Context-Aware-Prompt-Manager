@@ -1,0 +1,11 @@
+description: 'Categoría: Python'
+name: Generador de Mock Data Realista
+tags:
+- Python
+- testing
+- faker
+- fixtures
+template: Crea un script Python usando Faker para generar {{ cantidad }} registros
+  de datos de prueba realistas para el modelo {{ descripcion_modelo }}. Incluye semilla
+  fija para reproducibilidad y exporta a {{ json/csv/sqlite }}.
+version: 1.0.0

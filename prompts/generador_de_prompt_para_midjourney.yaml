@@ -1,0 +1,11 @@
+description: 'Categoría: IA Persona'
+name: Generador de Prompt para Midjourney
+tags:
+- IA Persona
+- art
+- midjourney
+- creative
+template: 'Crea un prompt altamente detallado para Midjourney v6 basado en la idea:
+  {{ idea_imagen }}. Incluye parámetros de iluminación, estilo artístico (ej. cyberpunk,
+  minimalista), tipo de lente y relación de aspecto --ar {{ aspect_ratio }}.'
+version: 1.0.0

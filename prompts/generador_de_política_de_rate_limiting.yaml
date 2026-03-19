@@ -1,0 +1,11 @@
+description: 'Categoría: Ingeniería'
+name: Generador de Política de Rate Limiting
+tags:
+- Ingeniería
+- api
+- rate limiting
+- security
+template: Diseña e implementa una política de rate limiting para la API {{ nombre_api
+  }} usando el algoritmo [Token Bucket/Sliding Window/Fixed Window]. Incluye diferenciación
+  por tier de usuario, headers de respuesta estándar y manejo de bursts.
+version: 1.0.0

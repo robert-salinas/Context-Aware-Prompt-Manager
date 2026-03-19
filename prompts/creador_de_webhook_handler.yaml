@@ -1,0 +1,11 @@
+description: 'Categoría: Python'
+name: Creador de Webhook Handler
+tags:
+- Python
+- webhooks
+- fastapi
+- integrations
+template: 'Implementa un handler de webhooks en FastAPI para recibir eventos de [SERVICIO:
+  Stripe/GitHub/Slack]. Incluye verificación de firma HMAC, manejo idempotente de
+  eventos, cola de reintentos y logging estructurado.'
+version: 1.0.0

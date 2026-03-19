@@ -97,7 +97,7 @@ class SearchIndex:
         # Simple search using MATCH
         cursor.execute(
             """
-            SELECT path, name, description, tags, rank 
+            SELECT path, name, content, description, tags, rank 
             FROM prompts_fts 
             WHERE prompts_fts MATCH ? 
             ORDER BY rank
@@ -111,6 +111,7 @@ class SearchIndex:
                 {
                     "path": row["path"],
                     "name": row["name"],
+                    "content": row["content"],
                     "description": row["description"],
                     "tags": row["tags"].split(",") if row["tags"] else [],
                     "rank": row["rank"],

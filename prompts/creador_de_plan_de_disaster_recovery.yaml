@@ -1,0 +1,11 @@
+description: 'Categoría: Ingeniería'
+name: Creador de Plan de Disaster Recovery
+tags:
+- Ingeniería
+- disaster recovery
+- backup
+- infrastructure
+template: Diseña el plan de Disaster Recovery para {{ sistema }}. Define RTO y RPO
+  target, estrategia de backup (frecuencia, retención, verificación), runbook de recuperación
+  paso a paso y procedimiento de prueba del DR cada {{ frecuencia }}.
+version: 1.0.0

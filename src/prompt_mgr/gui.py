@@ -5,6 +5,7 @@ import pyperclip
 import re
 from datetime import datetime
 from typing import List, Dict, Any, Optional
+from .manager import PromptManager
 
 # RS Standard - Design System
 RS_ORANGE = "#FF7A3D"
@@ -19,7 +20,7 @@ class RSPromptManagerGUI(ctk.CTk):
     RS Prompt Manager - Desktop Application
     Protocolo RS Standard | UI Re-designed (No Sidebar)
     """
-    def __init__(self, db_path: str = "prompts.json"):
+    def __init__(self):
         super().__init__()
 
         # Configuración de Ventana
@@ -35,9 +36,13 @@ class RSPromptManagerGUI(ctk.CTk):
             except Exception:
                 pass
         
-        self.db_path = db_path
+        # Inicializar Backend
+        self.mgr = PromptManager(os.getcwd())
+        if not os.path.exists(os.path.join(os.getcwd(), "prompts")):
+            self.mgr.init_project()
+
         self.config_data = self.load_config()
-        self.db_path = self.config_data.get("db_path", db_path)
+        self.db_path = self.config_data.get("db_path", "prompts.json")
         self.prompts_data: List[Dict[str, Any]] = self.load_data()
         self.current_category = "Todos"
         self.editing_prompt_id = None
@@ -68,33 +73,40 @@ class RSPromptManagerGUI(ctk.CTk):
             json.dump(config_data, f, indent=4, ensure_ascii=False)
 
     def load_data(self) -> List[Dict[str, Any]]:
-        """Carga la base de datos de prompts local."""
-        if os.path.exists(self.db_path):
-            try:
-                with open(self.db_path, "r", encoding="utf-8") as f:
-                    return json.load(f)
-            except Exception:
-                return []
-        return []
+        """Carga los prompts desde el backend."""
+        try:
+            backend_prompts = self.mgr.list_prompts()
+            gui_prompts = []
+            for bp in backend_prompts:
+                gui_prompts.append({
+                    "id": bp.get("filename", ""),
+                    "title": bp.get("name", "Sin título"),
+                    "category": bp.get("tags", ["Otros"])[0] if bp.get("tags") else "Otros",
+                    "tags": bp.get("tags", []),
+                    "content": bp.get("template", ""),
+                    "updated_at": ""
+                })
+            return gui_prompts
+        except Exception as e:
+            print(f"Error cargando datos: {e}")
+            return []
 
     def save_data(self):
-        """Guarda la base de datos de prompts local."""
-        with open(self.db_path, "w", encoding="utf-8") as f:
-            json.dump(self.prompts_data, f, indent=4, ensure_ascii=False)
+        """No se usa con el nuevo backend."""
+        pass
 
     def setup_ui(self):
         # Main Container
         self.main_container = ctk.CTkFrame(self, fg_color="transparent")
         self.main_container.grid(row=0, column=0, sticky="nsew", padx=40, pady=20)
         self.main_container.grid_columnconfigure(0, weight=1)
-        self.main_container.grid_rowconfigure(3, weight=1)
+        self.main_container.grid_rowconfigure(1, weight=1)
 
-        # 1. Header (Title, Subtitle, Config Button)
+        # 1. Header (Title, Subtitle)
         self.header_frame = ctk.CTkFrame(self.main_container, fg_color="transparent")
-        self.header_frame.grid(row=0, column=0, sticky="ew", pady=(0, 20))
+        self.header_frame.grid(row=0, column=0, sticky="ew", pady=(0, 10))
         self.header_frame.grid_columnconfigure(0, weight=1)
 
-        # Título y Subtítulo
         self.title_group = ctk.CTkFrame(self.header_frame, fg_color="transparent")
         self.title_group.grid(row=0, column=0, sticky="w")
         
@@ -106,16 +118,31 @@ class RSPromptManagerGUI(ctk.CTk):
                                      font=ctk.CTkFont(size=14), text_color=RS_TEXT_MUTED)
         self.sub_title.pack(anchor="w")
 
-        # Botón Configuración (Estilo Icono + Texto)
-        self.config_btn = ctk.CTkButton(self.header_frame, text="⚙️ Configuración", 
-                                      fg_color=RS_DARK_CARD, hover_color=RS_ORANGE,
-                                      width=120, height=35, corner_radius=8,
-                                      command=self.show_config)
-        self.config_btn.grid(row=0, column=1, sticky="e")
+        # 2. Tabview
+        self.tab_view = ctk.CTkTabview(self.main_container, fg_color=RS_DARK_BG)
+        self.tab_view.grid(row=1, column=0, sticky="nsew")
+        
+        self.tab_view.add("Catálogo 📂")
+        self.tab_view.add("Contexto 🧠")
+        self.tab_view.add("Configuración ⚙️")
 
-        # 2. KPI Cards
-        self.kpi_frame = ctk.CTkFrame(self.main_container, fg_color="transparent")
-        self.kpi_frame.grid(row=1, column=0, sticky="ew", pady=(0, 20))
+        self.setup_catalogo_tab()
+        self.setup_contexto_tab()
+        self.setup_config_tab()
+
+        # 5. Editor View (Hidden by default)
+        self.editor_view = ctk.CTkFrame(self.main_container, fg_color=RS_DARK_BG, corner_radius=0)
+
+        self.refresh_list()
+
+    def setup_catalogo_tab(self):
+        tab = self.tab_view.tab("Catálogo 📂")
+        tab.grid_columnconfigure(0, weight=1)
+        tab.grid_rowconfigure(2, weight=1)
+
+        # KPI Cards
+        self.kpi_frame = ctk.CTkFrame(tab, fg_color="transparent")
+        self.kpi_frame.grid(row=0, column=0, sticky="ew", pady=(10, 20))
         self.kpi_frame.grid_columnconfigure((0, 1, 2, 3), weight=1)
 
         self.create_kpi_card(0, "Estado", "Activo", "status")
@@ -124,9 +151,9 @@ class RSPromptManagerGUI(ctk.CTk):
         self.create_kpi_card(3, "Última Act.", "Hoy", "last_update")
         self.update_kpis()
 
-        # 3. Controls (Search & Add)
-        self.controls_frame = ctk.CTkFrame(self.main_container, fg_color="transparent")
-        self.controls_frame.grid(row=2, column=0, sticky="ew", pady=(0, 15))
+        # Controls
+        self.controls_frame = ctk.CTkFrame(tab, fg_color="transparent")
+        self.controls_frame.grid(row=1, column=0, sticky="ew", pady=(0, 15))
         self.controls_frame.grid_columnconfigure(0, weight=1)
 
         self.search_entry = ctk.CTkEntry(self.controls_frame, placeholder_text="Buscar por título o etiquetas...", 
@@ -141,22 +168,59 @@ class RSPromptManagerGUI(ctk.CTk):
                                    command=self.open_editor)
         self.add_btn.grid(row=0, column=1)
 
-        # 4. Prompts List
-        self.scrollable_frame = ctk.CTkScrollableFrame(self.main_container, fg_color=RS_DARK_CARD, 
+        # Prompts List
+        self.scrollable_frame = ctk.CTkScrollableFrame(tab, fg_color=RS_DARK_CARD, 
                                                      label_text="Catálogo de Prompts", label_text_color=RS_ORANGE,
                                                      corner_radius=12)
-        self.scrollable_frame.grid(row=3, column=0, sticky="nsew")
+        self.scrollable_frame.grid(row=2, column=0, sticky="nsew")
         self.scrollable_frame.grid_columnconfigure(0, weight=1)
 
-        # 5. Editor View (Hidden by default)
-        self.editor_view = ctk.CTkFrame(self.main_container, fg_color=RS_DARK_BG, corner_radius=0)
-        # grid will be called in open_editor
+    def setup_contexto_tab(self):
+        tab = self.tab_view.tab("Contexto 🧠")
+        tab.grid_columnconfigure(0, weight=1)
+        
+        self.context_info = ctk.CTkTextbox(tab, fg_color=RS_DARK_CARD, text_color=RS_TEXT_WHITE, font=ctk.CTkFont(size=14))
+        self.context_info.pack(fill="both", expand=True, padx=20, pady=20)
+        
+        btn = ctk.CTkButton(tab, text="Actualizar Contexto", fg_color=RS_ORANGE, hover_color=RS_ORANGE_DARK, command=self.update_context_view)
+        btn.pack(pady=10)
+        
+        self.update_context_view()
 
-        # Config View (Hidden)
-        self.config_view = ctk.CTkFrame(self.main_container, fg_color=RS_DARK_BG, corner_radius=0)
-        # show_config will grid it
+    def update_context_view(self):
+        try:
+            ctx = self.mgr.analyzer.analyze()
+            text = f"📂 Proyecto: {ctx.get('project_name')}\n\n"
+            text += f"🛠️ Tech Stack: {', '.join(ctx.get('tech_stack', []))}\n"
+            text += f"🌐 Lenguajes: {', '.join(ctx.get('languages', []))}\n"
+            text += f"🧪 Tests: {'Sí' if ctx.get('has_tests') else 'No'}\n"
+            text += f"📖 README: {'Sí' if ctx.get('has_readme') else 'No'}\n\n"
+            text += "--- Resumen README ---\n"
+            text += ctx.get("readme_summary", "N/A")
+            
+            self.context_info.configure(state="normal")
+            self.context_info.delete("1.0", "end")
+            self.context_info.insert("1.0", text)
+            self.context_info.configure(state="disabled")
+        except Exception as e:
+            print(f"Error actualizando contexto: {e}")
 
-        self.refresh_list()
+    def setup_config_tab(self):
+        tab = self.tab_view.tab("Configuración ⚙️")
+        tab.grid_columnconfigure(0, weight=1)
+        
+        # Panel Estilo Card para Configs
+        panel = ctk.CTkFrame(tab, fg_color=RS_DARK_CARD, corner_radius=12)
+        panel.pack(fill="both", expand=True, padx=20, pady=20)
+        
+        content = ctk.CTkFrame(panel, fg_color="transparent")
+        content.pack(fill="both", expand=True, padx=40, pady=40)
+        
+        self.create_config_item(content, "Ruta Base de Datos", self.config_data.get("db_path", "prompts.json"), "db_path")
+        self.create_config_item(content, "Categoría Predeterminada", self.config_data.get("default_cat", "Ingeniería"), "default_cat", is_option=True)
+        self.create_config_item(content, "Filtro de Seguridad", self.config_data.get("forbidden", "admin, root"), "forbidden")
+
+        ctk.CTkButton(content, text="Guardar Configuración", fg_color=RS_ORANGE, command=self.on_save_config).pack(pady=20)
 
     def create_kpi_card(self, col: int, title: str, value: str, attr_name: str):
         card = ctk.CTkFrame(self.kpi_frame, fg_color=RS_DARK_CARD, corner_radius=12)
@@ -170,22 +234,13 @@ class RSPromptManagerGUI(ctk.CTk):
         setattr(self, f"kpi_{attr_name}", value_label)
 
     def show_main(self):
-        self.config_view.grid_forget()
         self.editor_view.grid_forget()
-        self.header_frame.grid(row=0, column=0, sticky="ew", pady=(0, 20))
-        self.kpi_frame.grid(row=1, column=0, sticky="ew", pady=(0, 20))
-        self.controls_frame.grid(row=2, column=0, sticky="ew", pady=(0, 15))
-        self.scrollable_frame.grid(row=3, column=0, sticky="nsew")
+        self.tab_view.grid(row=1, column=0, sticky="nsew")
 
     def open_editor(self, prompt: Optional[Dict[str, Any]] = None):
         """Abre el editor en la ventana actual."""
-        self.header_frame.grid_forget()
-        self.kpi_frame.grid_forget()
-        self.controls_frame.grid_forget()
-        self.scrollable_frame.grid_forget()
-        self.config_view.grid_forget()
-        
-        self.editor_view.grid(row=0, column=0, rowspan=4, sticky="nsew")
+        self.tab_view.grid_forget()
+        self.editor_view.grid(row=0, column=0, rowspan=2, sticky="nsew")
         
         for widget in self.editor_view.winfo_children():
             widget.destroy()
@@ -240,25 +295,34 @@ class RSPromptManagerGUI(ctk.CTk):
 
     def on_save_prompt(self):
         """Guarda los datos del editor y vuelve a la vista principal."""
-        data = {
-            "title": self.title_entry.get(),
-            "category": self.category_opt.get(),
-            "tags": [t.strip() for t in self.tags_entry.get().split(",") if t.strip()],
-            "content": self.content_text.get("1.0", "end-1c"),
-            "updated_at": datetime.now().isoformat()
+        title = self.title_entry.get()
+        category = self.category_opt.get()
+        tags = [t.strip() for t in self.tags_entry.get().split(",") if t.strip()]
+        if category not in tags:
+            tags.insert(0, category) # El primer tag es la categoría
+        content = self.content_text.get("1.0", "end-1c")
+
+        backend_data = {
+            "name": title,
+            "description": f"Categoría: {category}",
+            "template": content,
+            "tags": tags,
+            "version": "1.0.0"
         }
-        
-        if self.editing_prompt_id:
-            data["id"] = self.editing_prompt_id
-            for i, p in enumerate(self.prompts_data):
-                if p.get("id") == self.editing_prompt_id:
-                    self.prompts_data[i] = data
-                    break
-        else:
-            data["id"] = datetime.now().strftime("%Y%m%d%H%M%S")
-            self.prompts_data.append(data)
-        
-        self.save_data()
+
+        filename = self.editing_prompt_id if self.editing_prompt_id else f"{title.lower().replace(' ', '_')}.yaml"
+        if not filename.endswith(".yaml"):
+            filename += ".yaml"
+
+        try:
+            self.mgr.add_prompt(filename, backend_data)
+            self.show_toast(f"Prompt '{title}' guardado")
+        except Exception as e:
+            from tkinter import messagebox
+            messagebox.showerror("Error", f"No se pudo guardar el prompt: {e}")
+
+        # Recargar datos
+        self.prompts_data = self.load_data()
         self.update_kpis()
         self.refresh_list()
         self.show_main()
@@ -383,6 +447,17 @@ class RSPromptManagerGUI(ctk.CTk):
             self.kpi_top_category.configure(text="N/A")
             self.kpi_last_update.configure(text="Hoy")
 
+    def show_toast(self, message: str, duration: int = 2500):
+        """Muestra una notificación flotante no bloqueante."""
+        toast_frame = ctk.CTkFrame(self, fg_color=RS_ORANGE, corner_radius=20)
+        toast_frame.place(relx=0.5, rely=0.9, anchor="center")
+        
+        label = ctk.CTkLabel(toast_frame, text=message, font=ctk.CTkFont(size=13, weight="bold"), text_color=RS_DARK_BG)
+        label.pack(padx=20, pady=8)
+        
+        # Eliminar el widget después del tiempo indicado
+        self.after(duration, toast_frame.destroy)
+
     def on_search(self, event=None):
         self.refresh_list()
 
@@ -391,10 +466,27 @@ class RSPromptManagerGUI(ctk.CTk):
             widget.destroy()
 
         query = self.search_entry.get().lower() if not query else query.lower()
-        filtered = self.prompts_data
         
         if query:
-            filtered = [p for p in filtered if query in p["title"].lower() or any(query in t.lower() for t in p.get("tags", []))]
+            try:
+                search_results = self.mgr.search_prompts(query)
+                filtered = []
+                for sr in search_results:
+                    filtered.append({
+                        "id": sr.get("path", ""),
+                        "title": sr.get("name", ""),
+                        "category": sr.get("tags", ["Otros"])[0] if sr.get("tags") else "Otros",
+                        "tags": sr.get("tags", []),
+                        "content": sr.get("content", ""),
+                        "updated_at": ""
+                    })
+            except Exception as e:
+                print(f"Error en búsqueda FTS: {e}")
+                filtered = []
+        else:
+            # Recargar de la lista general
+            self.prompts_data = self.load_data()
+            filtered = self.prompts_data
 
         for i, prompt in enumerate(filtered):
             self.create_prompt_item(prompt, i)
@@ -409,7 +501,15 @@ class RSPromptManagerGUI(ctk.CTk):
         info_frame.grid(row=0, column=0, sticky="w", padx=20, pady=15)
         
         ctk.CTkLabel(info_frame, text=prompt["title"], font=ctk.CTkFont(size=16, weight="bold"), text_color=RS_ORANGE).pack(anchor="w")
-        ctk.CTkLabel(info_frame, text=" | ".join(prompt.get("tags", [])), font=ctk.CTkFont(size=11), text_color=RS_TEXT_MUTED).pack(anchor="w")
+        # Tags a modo de "Pills"
+        tags_frame = ctk.CTkFrame(info_frame, fg_color="transparent")
+        tags_frame.pack(anchor="w", pady=(5, 0))
+        
+        for tag in prompt.get("tags", []):
+            # Usar color de tarjeta para el fondo de la píldora
+            pill = ctk.CTkFrame(tags_frame, fg_color=RS_DARK_CARD, corner_radius=15, border_width=1, border_color=RS_ORANGE)
+            pill.pack(side="left", padx=2)
+            ctk.CTkLabel(pill, text=tag, font=ctk.CTkFont(size=10), text_color=RS_TEXT_WHITE, padx=8, pady=1).pack()
 
         # Preview
         preview = prompt["content"][:100] + "..." if len(prompt["content"]) > 100 else prompt["content"]
@@ -426,7 +526,8 @@ class RSPromptManagerGUI(ctk.CTk):
                     command=lambda p=prompt: self.open_editor(p)).pack(side="left", padx=5)
 
     def copy_to_clipboard(self, content: str):
-        variables = re.findall(r"\[([A-Z0-9_]+)\]", content)
+        # Buscar variables estilo Jinja2: {{ variable }}
+        variables = re.findall(r"\{\{\s*([a-zA-Z0-9_]+)\s*\}\}", content)
         if variables:
             var_dialog = RS_VariableDialog(self, list(set(variables)), content, self.final_copy)
             var_dialog.grab_set()
@@ -435,7 +536,7 @@ class RSPromptManagerGUI(ctk.CTk):
 
     def final_copy(self, text: str):
         pyperclip.copy(text)
-        print("Copiado al portapapeles")
+        self.show_toast("¡Copiado al portapapeles!")
 
 class RS_VariableDialog(ctk.CTkToplevel):
     def __init__(self, parent, variables: List[str], content: str, callback):
@@ -454,7 +555,7 @@ class RS_VariableDialog(ctk.CTkToplevel):
         container.pack(fill="both", expand=True, padx=30, pady=30)
         ctk.CTkLabel(container, text="Personalizar Variables", font=ctk.CTkFont(size=20, weight="bold"), text_color=RS_ORANGE).pack(pady=(0, 20))
         for var in self.variables:
-            ctk.CTkLabel(container, text=f"[{var}]:", text_color=RS_TEXT_WHITE).pack(anchor="w")
+            ctk.CTkLabel(container, text=f"{{{{ {var} }}}}:", text_color=RS_TEXT_WHITE).pack(anchor="w")
             entry = ctk.CTkEntry(container, fg_color=RS_DARK_CARD, border_color=RS_ORANGE, text_color=RS_TEXT_WHITE)
             entry.pack(fill="x", pady=(5, 15))
             self.entries[var] = entry
@@ -464,8 +565,9 @@ class RS_VariableDialog(ctk.CTkToplevel):
     def on_process(self):
         final_text = self.content
         for var, entry in self.entries.items():
-            val = entry.get() or f"[{var}]"
-            final_text = final_text.replace(f"[{var}]", val)
+            val = entry.get() or f"{{{{ {var} }}}}"
+            pattern = r"\{\{\s*" + var + r"\s*\}\}"
+            final_text = re.sub(pattern, val, final_text)
         self.callback(final_text)
         self.destroy()
 

@@ -1,0 +1,11 @@
+description: 'Categoría: Ingeniería'
+name: Escritor de Casos de Uso (User Stories)
+tags:
+- Ingeniería
+- agile
+- product
+- requirements
+template: 'Redacta 5 Historias de Usuario para la funcionalidad {{ funcionalidad }}
+  siguiendo el formato: ''Como {{ rol }}, quiero {{ accion }}, para {{ beneficio }}''.
+  Incluye criterios de aceptación para cada una.'
+version: 1.0.0

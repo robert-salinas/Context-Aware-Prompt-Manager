@@ -1,10 +1,10 @@
-name: Optimización de Consultas SQL
 description: 'Categoría: Python'
-template: 'Analiza este script de Python con SQLAlchemy y sugiere mejoras de rendimiento
-  para las consultas: {{ codigo_sql }}.'
+name: Optimización de Consultas SQL
 tags:
 - Python
 - database
 - sql
 - performance
+template: 'Analiza este script de Python con SQLAlchemy y sugiere mejoras de rendimiento
+  para las consultas: {{ codigo_sql }}.'
 version: 1.0.0

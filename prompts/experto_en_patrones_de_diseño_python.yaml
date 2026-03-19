@@ -1,0 +1,11 @@
+description: 'Categoría: Python'
+name: Experto en Patrones de Diseño Python
+tags:
+- Python
+- design patterns
+- oop
+- architecture
+template: 'Implementa el patrón de diseño [PATRON: Singleton/Observer/Factory/Strategy/Decorator]
+  en Python para resolver el siguiente problema: {{ descripcion_problema }}. Muestra
+  también el anti-patrón que esto reemplaza.'
+version: 1.0.0

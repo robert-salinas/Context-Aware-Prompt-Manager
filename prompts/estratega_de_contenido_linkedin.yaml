@@ -1,11 +1,11 @@
-name: Estratega de Contenido LinkedIn
 description: 'Categoría: Branding'
-template: Crea una serie de 5 posts para LinkedIn sobre {{ tema_principal }}. El tono
-  debe ser profesional pero cercano, enfocado en generar autoridad en el sector de
-  {{ industria }}. Incluye ganchos (hooks) y CTAs claros.
+name: Estratega de Contenido LinkedIn
 tags:
 - Branding
 - social media
 - copywriting
 - personal brand
+template: Crea una serie de 5 posts para LinkedIn sobre {{ tema_principal }}. El tono
+  debe ser profesional pero cercano, enfocado en generar autoridad en el sector de
+  {{ industria }}. Incluye ganchos (hooks) y CTAs claros.
 version: 1.0.0

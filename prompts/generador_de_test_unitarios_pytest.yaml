@@ -1,11 +1,11 @@
-name: Generador de Test Unitarios (Pytest)
 description: 'Categoría: Python'
-template: 'Escribe un conjunto completo de pruebas unitarias usando Pytest para la
-  función: {{ funcion }}. Cubre casos de éxito, errores esperados y valores límite
-  (edge cases).'
+name: Generador de Test Unitarios (Pytest)
 tags:
 - Python
 - testing
 - pytest
 - qa
+template: 'Escribe un conjunto completo de pruebas unitarias usando Pytest para la
+  función: {{ funcion }}. Cubre casos de éxito, errores esperados y valores límite
+  (edge cases).'
 version: 1.0.0

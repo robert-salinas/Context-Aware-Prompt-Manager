@@ -1,0 +1,12 @@
+description: 'Categoría: Branding'
+name: Generador de Onboarding Email Sequence
+tags:
+- Branding
+- email marketing
+- retention
+- saas
+template: 'Escribe una secuencia de 5 emails de onboarding para usuarios nuevos de
+  {{ producto }}. Email 1: bienvenida y quick win. Emails 2-4: activación de features
+  clave. Email 5: social proof y upgrade CTA. Incluye asunto y preheader para cada
+  uno.'
+version: 1.0.0

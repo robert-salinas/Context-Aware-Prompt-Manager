@@ -1,0 +1,11 @@
+description: 'Categoría: Branding'
+name: Generador de Nombres de Marca
+tags:
+- Branding
+- naming
+- creative
+- startup
+template: Sugiere 15 nombres creativos y memorables para una nueva empresa de {{ sector
+  }}. Los nombres deben transmitir {{ emocion/valor }} y estar disponibles (aparentemente)
+  para dominios .com o .io.
+version: 1.0.0

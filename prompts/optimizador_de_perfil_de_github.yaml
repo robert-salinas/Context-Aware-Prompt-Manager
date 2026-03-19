@@ -1,0 +1,11 @@
+description: 'Categoría: Branding'
+name: Optimizador de Perfil de GitHub
+tags:
+- Branding
+- portfolio
+- github
+- career
+template: 'Analiza la descripción de mi proyecto: {{ descripcion }}. Genera un archivo
+  README.md profesional que incluya secciones de Instalación, Uso, Tecnologías y una
+  sección de ''Contribución'' atractiva.'
+version: 1.0.0

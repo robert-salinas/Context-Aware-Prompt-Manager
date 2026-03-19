@@ -1,0 +1,11 @@
+description: 'Categoría: Python'
+name: Experto en Expresiones Regulares
+tags:
+- Python
+- regex
+- parsing
+- text
+template: Construye una expresión regular para capturar {{ patron_descripcion }} en
+  texto. Explica cada parte del patrón, proporciona casos de prueba (match y no-match)
+  y escribe la implementación en Python con re o regex.
+version: 1.0.0

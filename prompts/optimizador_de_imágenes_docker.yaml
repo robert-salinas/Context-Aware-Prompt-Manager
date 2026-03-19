@@ -1,0 +1,11 @@
+description: 'Categoría: Ingeniería'
+name: Optimizador de Imágenes Docker
+tags:
+- Ingeniería
+- docker
+- optimization
+- devops
+template: 'Analiza este Dockerfile: {{ dockerfile }}. Identifica capas ineficientes,
+  dependencias innecesarias en la imagen final y reescríbelo usando multi-stage builds
+  para reducir el tamaño al mínimo posible.'
+version: 1.0.0

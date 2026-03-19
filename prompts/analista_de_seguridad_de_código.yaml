@@ -1,0 +1,11 @@
+description: 'Categoría: Ingeniería'
+name: Analista de Seguridad de Código
+tags:
+- Ingeniería
+- security
+- cybersecurity
+- audit
+template: 'Escanea el siguiente fragmento de código en busca de vulnerabilidades comunes
+  (OWASP Top 10): {{ codigo }}. Identifica posibles inyecciones SQL, XSS o fugas de
+  datos y sugiere la corrección.'
+version: 1.0.0

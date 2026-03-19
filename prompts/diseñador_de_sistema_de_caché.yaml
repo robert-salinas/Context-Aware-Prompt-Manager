@@ -1,0 +1,11 @@
+description: 'Categoría: Ingeniería'
+name: Diseñador de Sistema de Caché
+tags:
+- Ingeniería
+- cache
+- redis
+- performance
+template: Diseña la estrategia de caché para {{ servicio/api }} usando Redis. Define
+  políticas de TTL, estrategias de invalidación (cache-aside, write-through), manejo
+  de cache stampede y estructura de keys para {{ caso_uso }}.
+version: 1.0.0

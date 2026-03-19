@@ -1,0 +1,10 @@
+description: 'Categoría: Ingeniería'
+name: Planificador de Roadmaps de Producto
+tags:
+- Ingeniería
+- product management
+- strategy
+- planning
+template: Crea un roadmap de producto para los próximos 6 meses para {{ proyecto }}.
+  Divide las tareas en Q1 y Q2, priorizando por impacto y esfuerzo técnico.
+version: 1.0.0

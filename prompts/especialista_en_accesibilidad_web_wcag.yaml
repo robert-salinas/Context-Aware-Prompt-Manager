@@ -1,0 +1,11 @@
+description: 'Categoría: Ingeniería'
+name: Especialista en Accesibilidad Web (WCAG)
+tags:
+- Ingeniería
+- accessibility
+- wcag
+- frontend
+template: 'Audita el siguiente componente HTML/React: {{ codigo }}. Evalúa el cumplimiento
+  de WCAG 2.1 AA, identifica problemas de contraste, navegación por teclado, ARIA
+  roles faltantes y screen reader compatibility. Proporciona el código corregido.'
+version: 1.0.0

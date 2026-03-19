@@ -1,0 +1,11 @@
+description: 'Categoría: IA Persona'
+name: Generador de Prompts de Sistema para LLMs
+tags:
+- IA Persona
+- prompting
+- llm
+- system prompt
+template: Diseña un system prompt robusto para un agente de IA cuya función es {{
+  funcion_agente }}. Define el rol, restricciones explícitas de lo que NO debe hacer,
+  formato de respuesta esperado y 3 ejemplos few-shot de interacciones ideales.
+version: 1.0.0

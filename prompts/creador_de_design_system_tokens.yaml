@@ -1,0 +1,12 @@
+description: 'Categoría: Branding'
+name: Creador de Design System Tokens
+tags:
+- Branding
+- design system
+- css
+- tokens
+template: Define los design tokens para el sistema de diseño de {{ marca }}. Incluye
+  paleta de colores con variantes (primary, secondary, neutral, semantic), escala
+  tipográfica, espaciado, border-radius y sombras. Exporta en formato CSS custom properties
+  y JSON.
+version: 1.0.0

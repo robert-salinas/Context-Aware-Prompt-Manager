@@ -1,0 +1,11 @@
+description: 'Categoría: Branding'
+name: Consultor de Modelo de Pricing SaaS
+tags:
+- Branding
+- saas
+- pricing
+- business model
+template: Diseña 3 tiers de pricing (Free, Pro, Enterprise) para el producto SaaS
+  {{ descripcion_producto }}. Define qué features incluye cada tier, los límites de
+  uso (seats, API calls, storage) y justifica la estrategia de value-based pricing.
+version: 1.0.0

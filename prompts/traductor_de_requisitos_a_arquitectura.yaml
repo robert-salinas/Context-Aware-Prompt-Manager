@@ -1,0 +1,12 @@
+description: 'Categoría: Ingeniería'
+name: Traductor de Requisitos a Arquitectura
+tags:
+- Ingeniería
+- architecture
+- requirements
+- design
+template: 'Tengo los siguientes requisitos de negocio: {{ requisitos }}. Tradúcelos
+  a decisiones de arquitectura técnica. Para cada requisito no funcional (performance,
+  availability, scalability) especifica el patrón arquitectónico que aplicarías y
+  por qué.'
+version: 1.0.0

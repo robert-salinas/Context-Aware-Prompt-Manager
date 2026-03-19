@@ -1,11 +1,11 @@
-name: Analista de Logs y Errores
 description: 'Categoría: Ingeniería'
-template: 'Analiza el siguiente rastro de error (stack trace) o logs: {{ logs }}.
-  Identifica la causa raíz probable, sugiere una solución inmediata y una medida preventiva
-  para el futuro.'
+name: Analista de Logs y Errores
 tags:
 - Ingeniería
 - debugging
 - logs
 - troubleshooting
+template: 'Analiza el siguiente rastro de error (stack trace) o logs: {{ logs }}.
+  Identifica la causa raíz probable, sugiere una solución inmediata y una medida preventiva
+  para el futuro.'
 version: 1.0.0

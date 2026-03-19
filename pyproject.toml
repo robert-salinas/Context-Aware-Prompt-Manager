@@ -15,6 +15,7 @@ dependencies = [
     "pydantic>=2.0.0",
     "customtkinter>=5.2.0",
     "pyperclip>=1.8.2",
+    "pytest>=8.0.0",
 ]
 readme = "README.md"
 requires-python = ">=3.11"

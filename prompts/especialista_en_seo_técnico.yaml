@@ -1,11 +1,11 @@
-name: Especialista en SEO Técnico
 description: 'Categoría: Branding'
-template: 'Realiza una auditoría de SEO técnico para el sitio web {{ url }}. Enfócate
-  en Core Web Vitals, estructura de encabezados H1-H3 y optimización de metadatos
-  para la keyword: {{ keyword }}.'
+name: Especialista en SEO Técnico
 tags:
 - Branding
 - seo
 - marketing
 - web
+template: 'Realiza una auditoría de SEO técnico para el sitio web {{ url }}. Enfócate
+  en Core Web Vitals, estructura de encabezados H1-H3 y optimización de metadatos
+  para la keyword: {{ keyword }}.'
 version: 1.0.0

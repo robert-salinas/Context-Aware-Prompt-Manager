@@ -1,0 +1,11 @@
+description: 'Categoría: Ingeniería'
+name: Analista de Métricas de Producto
+tags:
+- Ingeniería
+- analytics
+- kpi
+- product
+template: Define el plan de métricas (North Star Metric, métricas de input y guardrail
+  metrics) para {{ tipo_producto }}. Para cada métrica explica cómo medirla, la query
+  SQL/evento de tracking necesario y el target inicial.
+version: 1.0.0

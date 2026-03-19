@@ -1,10 +1,10 @@
-name: Guía de Estilo Branding
 description: 'Categoría: Branding'
-template: Genera un manifiesto de marca para {{ nombre_marca }}, enfocándote en los
-  valores de {{ valores_core }}.
+name: Guía de Estilo Branding
 tags:
 - Branding
 - design
 - brand
 - identity
+template: Genera un manifiesto de marca para {{ nombre_marca }}, enfocándote en los
+  valores de {{ valores_core }}.
 version: 1.0.0

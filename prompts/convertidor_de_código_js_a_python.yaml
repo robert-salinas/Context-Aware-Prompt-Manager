@@ -1,0 +1,11 @@
+description: 'Categoría: Python'
+name: Convertidor de Código (JS a Python)
+tags:
+- Python
+- conversion
+- javascript
+- refactoring
+template: 'Traduce el siguiente código de JavaScript a Python 3.10+: {{ codigo_js
+  }}. Asegúrate de usar las estructuras de datos equivalentes más eficientes y seguir
+  PEP 8.'
+version: 1.0.0
