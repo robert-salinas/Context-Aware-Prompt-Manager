@@ -1,0 +1,15 @@
+name: Generador de Commits Semánticos
+description: Crea mensajes de commit siguiendo el estándar Conventional Commits.
+template: 'A partir de los siguientes cambios realizados en el proyecto {{ project_name
+  }}, genera un mensaje de commit que siga Conventional Commits (feat, fix, chore,
+  docs, style, etc):
+
+
+  Cambios:
+
+  {{ cambios }}'
+tags:
+- Git
+- Convenios
+- Mantenimiento
+version: 1.0.0
