@@ -1,0 +1,16 @@
+name: Revisor de Seguridad
+description: Busca fugas o vulnerabilidades conocidas.
+template: 'Realiza una auditoría de seguridad en este fragmento de código. Busca vulnerabilidades
+  como Inyección SQL, XSS o fugas de memoria:
+
+
+  ```
+
+  [CÓDIGO]
+
+  ```'
+tags:
+- Seguridad
+- Auditoría
+- SecOps
+version: 1.0.0
