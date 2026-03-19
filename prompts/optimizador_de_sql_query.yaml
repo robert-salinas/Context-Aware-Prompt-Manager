@@ -1,0 +1,16 @@
+name: Optimizador de SQL Query
+description: Enfocado en índices y planes de ejecución.
+template: 'Optimiza la siguiente consulta SQL. Explica qué índices crearías y cómo
+  cambia el Plan de Ejecución:
+
+
+  ```sql
+
+  [QUERY]
+
+  ```'
+tags:
+- SQL
+- DB
+- Performance
+version: 1.0.0
