@@ -1,0 +1,11 @@
+name: Arquitectura de Microservicios
+description: 'Categoría: Ingeniería'
+template: Actúa como un arquitecto senior. Diseña la estructura de microservicios
+  para el proyecto {{ nombre_proyecto }}, considerando escalabilidad y el stack {{
+  stack_tecnologico }}.
+tags:
+- Ingeniería
+- backend
+- microservices
+- patterns
+version: 1.0.0
