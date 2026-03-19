@@ -1,0 +1,11 @@
+name: Documentador de API (Swagger)
+description: 'Categoría: Ingeniería'
+template: 'Genera la documentación OpenAPI 3.0 para los siguientes endpoints: {{ endpoints
+  }}. Incluye descripciones de parámetros, códigos de respuesta (200, 400, 500) y
+  ejemplos de JSON de salida.'
+tags:
+- Ingeniería
+- documentation
+- api
+- openapi
+version: 1.0.0
