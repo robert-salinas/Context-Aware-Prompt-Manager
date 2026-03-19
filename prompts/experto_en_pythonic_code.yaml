@@ -1,0 +1,11 @@
+name: Experto en Pythonic Code
+description: 'Categoría: Python'
+template: 'Revisa el siguiente fragmento de código Python: {{ codigo }}. Aplica principios
+  de Clean Code, elimina redundancias y asegúrate de que sea ''Pythonic''. Explica
+  cada cambio realizado.'
+tags:
+- Python
+- clean code
+- best practices
+- refactoring
+version: 1.0.0
