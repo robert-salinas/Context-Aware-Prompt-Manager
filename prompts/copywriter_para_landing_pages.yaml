@@ -1,0 +1,11 @@
+name: Copywriter para Landing Pages
+description: 'Categoría: Branding'
+template: 'Escribe el texto para una landing page de alta conversión para {{ producto_servicio
+  }}. Utiliza la estructura AIDA (Atención, Interés, Deseo, Acción) y resalta el beneficio
+  principal: {{ beneficio_clave }}.'
+tags:
+- Branding
+- sales
+- conversion
+- copy
+version: 1.0.0
