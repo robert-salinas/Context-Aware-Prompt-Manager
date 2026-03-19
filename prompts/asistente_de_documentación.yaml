@@ -1,0 +1,15 @@
+name: Asistente de Documentación
+description: Genera Docstrings estilo Google o Numpy.
+template: 'Genera la documentación (Docstring) en formato {{ doc_style | default(''Google'')
+  }} para la siguiente función:
+
+
+  ```python
+
+  [FUNCION]
+
+  ```'
+tags:
+- Doc
+- Mantenimiento
+version: 1.0.0
