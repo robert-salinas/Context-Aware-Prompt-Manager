@@ -1,0 +1,16 @@
+name: Analizador de Logs / Error Debugger
+description: Diagnostica errores a partir de trazas de logs o excepciones.
+template: 'Analiza la siguiente traza de error/log. Explica cuál es la causa más probable
+  y lista de 2 a 3 pasos exactos para solucionarlo:
+
+
+  ```
+
+  {{ logs }}
+
+  ```'
+tags:
+- Debug
+- Soporte
+- Logs
+version: 1.0.0
