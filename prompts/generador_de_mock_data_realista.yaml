@@ -7,5 +7,5 @@ tags:
 - fixtures
 template: Crea un script Python usando Faker para generar {{ cantidad }} registros
   de datos de prueba realistas para el modelo {{ descripcion_modelo }}. Incluye semilla
-  fija para reproducibilidad y exporta a {{ json/csv/sqlite }}.
+  fija para reproducibilidad y exporta a {{ formato_salida }}.
 version: 1.0.0

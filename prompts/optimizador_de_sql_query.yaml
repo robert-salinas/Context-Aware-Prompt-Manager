@@ -6,7 +6,7 @@ template: 'Optimiza la siguiente consulta SQL. Explica qué índices crearías y
 
   ```sql
 
-  [QUERY]
+  {{ consulta_sql }}
 
   ```'
 tags:

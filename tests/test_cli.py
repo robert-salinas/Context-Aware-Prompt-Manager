@@ -2,7 +2,6 @@ import pytest
 from typer.testing import CliRunner
 from prompt_mgr.cli import app
 import os
-import shutil
 
 runner = CliRunner()
 

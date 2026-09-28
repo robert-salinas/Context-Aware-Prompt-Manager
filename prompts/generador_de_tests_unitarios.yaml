@@ -8,7 +8,7 @@ template: 'Genera una suite de pruebas unitarias para el siguiente código. Aseg
 
   ```
 
-  [CÓDIGO]
+  {{ codigo }}
 
   ```'
 tags:

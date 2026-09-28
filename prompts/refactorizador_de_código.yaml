@@ -6,7 +6,7 @@ template: 'Actúa como un Senior Developer. Analiza el siguiente código {{ tech
 
   ```python
 
-  [INSERTA CÓDIGO]
+  {{ codigo }}
 
   ```'
 tags:

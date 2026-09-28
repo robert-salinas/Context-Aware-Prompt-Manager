@@ -1,0 +1,14 @@
+VSVersionInfo(
+  ffi=FixedFileInfo(filevers=(0, 2, 0, 0), prodvers=(0, 2, 0, 0), mask=0x3f,
+                    flags=0x0, OS=0x40004, fileType=0x1, subtype=0x0, date=(0, 0)),
+  kids=[StringFileInfo([StringTable('040904B0', [
+    StringStruct('CompanyName', 'RS Digital'),
+    StringStruct('FileDescription', 'Local contextual prompt manager'),
+    StringStruct('FileVersion', '0.2.0'),
+    StringStruct('InternalName', 'RS-Context-Prompt-Manager'),
+    StringStruct('LegalCopyright', 'Copyright Robert Salinas'),
+    StringStruct('OriginalFilename', 'RS-Context-Prompt-Manager.exe'),
+    StringStruct('ProductName', 'RS Context Prompt Manager'),
+    StringStruct('ProductVersion', '0.2.0')
+  ])]), VarFileInfo([VarStruct('Translation', [1033, 1200])])]
+)

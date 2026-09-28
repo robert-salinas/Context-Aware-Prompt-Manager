@@ -6,6 +6,6 @@ tags:
 - iac
 - cloud
 template: Escribe los módulos de Terraform para desplegar {{ infraestructura }} en
-  {{ aws/gcp/azure }}. Incluye variables parametrizadas, outputs, estado remoto en
+  {{ proveedor_cloud }}. Incluye variables parametrizadas, outputs, estado remoto en
   S3/GCS y sigue las convenciones de naming del proyecto {{ nombre }}.
 version: 1.0.0

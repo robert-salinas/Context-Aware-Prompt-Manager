@@ -1,5 +1,4 @@
 import pytest
-import os
 from prompt_mgr.search import SearchIndex
 
 
@@ -40,3 +39,10 @@ def test_search_remove(search_db):
     assert len(idx.search("N1")) == 1
     idx.remove_prompt("p1.yaml")
     assert len(idx.search("N1")) == 0
+
+
+def test_search_treats_user_punctuation_as_plain_text(search_db):
+    idx = SearchIndex(search_db)
+    idx.index_prompt("sql.yaml", "SQL helper", "optimize query", ["database"], "SQL")
+    assert idx.search('SQL: "helper"')
+    assert idx.search("---") == []

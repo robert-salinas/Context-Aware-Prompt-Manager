@@ -15,16 +15,16 @@ prompt-mgr <comando>
 ```
 
 ## 2. Los cambios no se ven reflejados en Git
-CAPM intenta hacer commit automáticamente de cada prompt añadido. Si falla:
+La GUI solo crea commits si activaste **Crear una versión Git al guardar**. Los commits pertenecen a la biblioteca local, nunca al proyecto analizado. Si falla:
 **Solución:**
 - Verifica que tienes `git` instalado en tu PATH.
-- Asegúrate de haber ejecutado `prompt-mgr init` primero.
+- Comprueba que Git tenga nombre y correo configurados.
 - Revisa los permisos de escritura en la carpeta `prompts/`.
 
 ## 3. La búsqueda no encuentra prompts nuevos
 Si la base de datos de búsqueda parece desactualizada.
 **Solución:**
-- Elimina el archivo `.prompt_mgr.db` y vuelve a añadir los prompts.
+- Cierra la aplicación y elimina `.prompt_mgr.db` dentro de la biblioteca; el índice se reconstruye desde los YAML al abrir.
 - Asegúrate de que los archivos en `prompts/` tengan extensión `.yaml`.
 
 ## 4. Error de Jinja2: `UndefinedError`

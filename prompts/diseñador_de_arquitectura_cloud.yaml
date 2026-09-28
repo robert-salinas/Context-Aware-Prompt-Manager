@@ -5,7 +5,7 @@ tags:
 - cloud
 - aws
 - infrastructure
-template: Diseña una infraestructura en {{ aws/azure/gcp }} para una aplicación que
+template: Diseña una infraestructura en {{ proveedor_cloud }} para una aplicación que
   requiere alta disponibilidad y manejo de picos de tráfico. Describe los servicios
   necesarios para computación, base de datos y CDN.
 version: 1.0.0

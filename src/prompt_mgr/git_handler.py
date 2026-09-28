@@ -1,5 +1,4 @@
-import os
-from typing import Optional, List, Any, Dict, Union, Tuple
+from typing import Optional, List, Any, Dict
 from git import Repo, InvalidGitRepositoryError, GitCommandError
 
 
@@ -121,3 +120,10 @@ class GitHandler:
             return list(blame_data) if blame_data else []
         except GitCommandError:
             return []
+
+    def commit_deletion(self, file_path: str, message: str) -> None:
+        if not self.repo:
+            self.init_repo()
+        assert self.repo is not None
+        self.repo.git.add("-A", file_path)
+        self.repo.index.commit(message)

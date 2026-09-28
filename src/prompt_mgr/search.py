@@ -1,5 +1,5 @@
 import sqlite3
-import os
+import re
 from typing import List, Dict, Any
 
 
@@ -68,12 +68,14 @@ class SearchIndex:
         # Insert new entry
         tags_str = ",".join(tags)
         cursor.execute(
-            "INSERT INTO prompts_fts (path, name, content, tags, description) VALUES (?, ?, ?, ?, ?)",
+            "INSERT INTO prompts_fts "
+            "(path, name, content, tags, description) VALUES (?, ?, ?, ?, ?)",
             (path, name, content, tags_str, description),
         )
 
         cursor.execute(
-            "INSERT OR REPLACE INTO prompts_metadata (path, last_updated) VALUES (?, CURRENT_TIMESTAMP)",
+            "INSERT OR REPLACE INTO prompts_metadata "
+            "(path, last_updated) VALUES (?, CURRENT_TIMESTAMP)",
             (path,),
         )
 
@@ -95,14 +97,19 @@ class SearchIndex:
         cursor = conn.cursor()
 
         # Simple search using MATCH
+        terms = re.findall(r"[\wáéíóúüñ]+", query.lower(), flags=re.UNICODE)
+        if not terms:
+            conn.close()
+            return []
+        safe_query = " AND ".join(f'"{term}"' for term in terms)
         cursor.execute(
             """
-            SELECT path, name, content, description, tags, rank 
-            FROM prompts_fts 
-            WHERE prompts_fts MATCH ? 
+            SELECT path, name, content, description, tags, rank
+            FROM prompts_fts
+            WHERE prompts_fts MATCH ?
             ORDER BY rank
         """,
-            (query,),
+            (safe_query,),
         )
 
         results = []

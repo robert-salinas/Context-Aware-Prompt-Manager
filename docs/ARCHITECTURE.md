@@ -1,21 +1,21 @@
-# Arquitectura del Prompt Manager
+# Arquitectura
 
-## Visión General
-El Context-Aware Prompt Manager es una herramienta de CLI diseñada para gestionar prompts de LLM de forma estructurada, versionada y consciente del contexto del proyecto.
+## Responsabilidades
 
-## Componentes Principales
+- `PromptManager`: biblioteca YAML, renderizado Jinja2 estricto, índice y versiones.
+- `ContextAnalyzer`: señales estructurales del proyecto activo; no interpreta semánticamente el código.
+- `SearchIndex`: índice local SQLite FTS5 reconstruible desde YAML.
+- `GitHandler`: historial opcional de la biblioteca, separado del repositorio analizado.
+- `SettingsStore`: preferencias y biblioteca escribible bajo `%APPDATA%\RS-Prompt-Manager`.
+- `gui.py`: selección explícita de proyecto, catálogo, vista previa, editor y exportación.
 
-1.  **CLI (Typer):** Interfaz de usuario para interactuar con el sistema.
-2.  **Manager:** Coordina las operaciones entre los diferentes módulos.
-3.  **Git Handler:** Gestiona el versionado de los prompts utilizando GitPython. Cada cambio se guarda como un commit.
-4.  **Context Analyzer:** Analiza el entorno del proyecto (archivos, estructura, stacks tecnológicos) para proveer variables dinámicas.
-5.  **Search Index (SQLite FTS5):** Indexa el contenido y metadatos de los prompts para búsquedas rápidas.
-6.  **Jinja2 Templating:** Permite el uso de variables como `{{ project_name }}` o `{{ tech_stack }}` dentro de los prompts.
+## Flujo
 
-## Flujo de Datos
-1.  El usuario crea un prompt mediante `prompt-mgr add`.
-2.  El Manager valida la estructura (Pydantic).
-3.  Se guarda el archivo YAML en `prompts/`.
-4.  Git Handler realiza un commit del nuevo archivo.
-5.  Search Index actualiza la base de datos SQLite.
-6.  Al exportar (`prompt-mgr export`), el Context Analyzer extrae datos del proyecto y Jinja2 los inyecta en el template.
+1. La GUI abre la biblioteca local y el proyecto activo guardado.
+2. El usuario puede cambiar el proyecto sin escribir nada dentro de él.
+3. La búsqueda consulta FTS5 y devuelve los YAML correspondientes.
+4. La vista contextualizada usa Jinja2 con `StrictUndefined`; una variable ausente bloquea la copia contextualizada y se muestra como error.
+5. Guardar un prompt escribe primero un temporal y después reemplaza el YAML.
+6. Si el usuario activó el historial, Git registra el cambio en la biblioteca local.
+
+Los YAML son la fuente de verdad. SQLite y Git aportan búsqueda e historial; ninguno reemplaza el almacenamiento principal.

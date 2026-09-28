@@ -1,7 +1,5 @@
 import os
-import json
 from typing import Dict, Any, List
-import yaml
 
 
 class ContextAnalyzer:
@@ -67,9 +65,9 @@ class ContextAnalyzer:
     def _detect_languages(self) -> List[str]:
         """Detecta los lenguajes de programación presentes en el proyecto."""
         langs = set()
+        ignored = {"node_modules", "build", "dist", "venv", ".venv", "__pycache__"}
         for root, dirs, files in os.walk(self.project_path):
-            # Skip hidden dirs
-            dirs[:] = [d for d in dirs if not d.startswith(".")]
+            dirs[:] = [d for d in dirs if not d.startswith(".") and d not in ignored]
             for f in files:
                 if f.endswith(".py"):
                     langs.add("Python")
@@ -105,7 +103,10 @@ class ContextAnalyzer:
         readme_path = os.path.join(self.project_path, "README.md")
         try:
             with open(readme_path, "r", encoding="utf-8") as f:
-                content = f.read(500)  # Read first 500 chars
-                return content.strip()
+                content = f.read(2000)
+                paragraphs = [
+                    part.strip() for part in content.split("\n\n") if part.strip()
+                ]
+                return "\n\n".join(paragraphs[:3])[:1000]
         except Exception:
             return ""

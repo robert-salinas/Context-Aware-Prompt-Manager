@@ -6,6 +6,6 @@ tags:
 - creative
 - startup
 template: Sugiere 15 nombres creativos y memorables para una nueva empresa de {{ sector
-  }}. Los nombres deben transmitir {{ emocion/valor }} y estar disponibles (aparentemente)
+  }}. Los nombres deben transmitir {{ emocion_valor }} y estar disponibles (aparentemente)
   para dominios .com o .io.
 version: 1.0.0

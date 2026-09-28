@@ -6,7 +6,7 @@ template: 'Realiza una auditoría de seguridad en este fragmento de código. Bus
 
   ```
 
-  [CÓDIGO]
+  {{ codigo }}
 
   ```'
 tags:

@@ -6,7 +6,7 @@ template: 'Genera la documentación (Docstring) en formato {{ doc_style | defaul
 
   ```python
 
-  [FUNCION]
+  {{ funcion }}
 
   ```'
 tags:
